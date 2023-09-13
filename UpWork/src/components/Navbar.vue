@@ -125,7 +125,7 @@
                       <template v-slot:activator="{ props }">
                         <v-btn
                           class="rounded-pill"
-                          color="green-darken-3"
+                          color="green-darken-3 ma-2"
                           v-bind="props"
                         >
                           Talent <v-icon icon="mdi-chevron-down"></v-icon>
@@ -149,8 +149,8 @@
             </template>
           </v-hover>
 
-          <v-btn class="rounded-pill"> Log in </v-btn>
-          <v-btn class="rounded-pill" color="green-darken-3" variant="flat">
+          <v-btn class="rounded-pill oio"> Log in </v-btn>
+          <v-btn class="rounded-pill h-25	uoi" color="green-darken-3 " variant="flat" >
             Sign up
           </v-btn>
         </template>
@@ -228,6 +228,11 @@ export default {
 }
 .v-btn.v-btn--density-default {
   height: 28px !important;
+  margin: 5px;
+
+  &.uoi , &.oio{
+    height: 35px !important;
+  }
 }
 .v-input__details > .v-icon,
 .v-input__prepend > .v-icon,
@@ -266,4 +271,5 @@ hr {
   text-transform: lowercase !important;
   line-height: 0% !important;
 }
+
 </style>
