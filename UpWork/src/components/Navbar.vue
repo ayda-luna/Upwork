@@ -144,7 +144,11 @@
           </v-hover>
 
           <v-btn class="rounded-pill oio"> Log in </v-btn>
-          <v-btn class="rounded-pill h-25	uoi" color="green-darken-3 " variant="flat" >
+          <v-btn
+            class="rounded-pill h-25 uoi"
+            color="green-darken-3 "
+            variant="flat"
+          >
             Sign up
           </v-btn>
         </template>
@@ -161,7 +165,6 @@ export default {
       { title: "Click Me" },
       { title: "Click Me" },
       { title: "Click Me" },
-      { title: "Click Me 2" },
     ],
   }),
   methods: {},
@@ -224,7 +227,8 @@ export default {
   height: 28px !important;
   margin: 5px;
 
-  &.uoi , &.oio{
+  &.uoi,
+  &.oio {
     height: 35px !important;
   }
 }
@@ -265,5 +269,4 @@ hr {
   text-transform: lowercase !important;
   line-height: 0% !important;
 }
-
 </style>

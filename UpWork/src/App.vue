@@ -6,7 +6,7 @@
           <Navbar></Navbar>
         </v-sheet>
       </v-col>
-      <v-col cols="4">
+      <v-col cols="12">
         <v-sheet class="pa-4 ma-4">
           <Menubar></Menubar>
         </v-sheet>
@@ -34,4 +34,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>
