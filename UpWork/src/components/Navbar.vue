@@ -50,27 +50,12 @@
               </v-list>
             </v-menu>
 
-            <v-btn variant="tonal" class="text-h6">
-              Parent activator <v-icon icon="mdi-chevron-down"></v-icon>
-
-              <v-menu activator="parent">
-                <v-list>
-                  <v-list-item
-                    v-for="(item, index) in items"
-                    :key="index"
-                    :value="index"
-                  >
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </v-btn>
-
-            <v-btn variant="tonal" id="menu-activator" class="text-h6">
-              Sibling activator <v-icon icon="mdi-chevron-down"></v-icon>
-            </v-btn>
-
-            <v-menu activator="#menu-activator">
+            <v-menu>
+              <template #activator="{ props }">
+                <v-btn variant="tonal" v-bind="props" class="text-h6">
+                  Activator slot <v-icon icon="mdi-chevron-down"></v-icon>
+                </v-btn>
+              </template>
               <v-list>
                 <v-list-item
                   v-for="(item, index) in items"
@@ -82,11 +67,12 @@
               </v-list>
             </v-menu>
 
-            <v-btn variant="tonal" id="asd-activator" class="text-h6">
-              asd activator <v-icon icon="mdi-chevron-down"></v-icon>
-            </v-btn>
-
-            <v-menu activator="#asd-activator">
+            <v-menu>
+              <template #activator="{ props }">
+                <v-btn variant="tonal" v-bind="props" class="text-h6">
+                  Activator slot <v-icon icon="mdi-chevron-down"></v-icon>
+                </v-btn>
+              </template>
               <v-list>
                 <v-list-item
                   v-for="(item, index) in items"
@@ -96,6 +82,14 @@
                   <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item>
               </v-list>
+            </v-menu>
+
+            <v-menu>
+              <template #activator="{ props }">
+                <v-btn variant="tonal" v-bind="props" class="text-h6">
+                  Activator slot
+                </v-btn>
+              </template>
             </v-menu>
           </div>
           <div></div>
