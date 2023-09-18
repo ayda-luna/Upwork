@@ -77,7 +77,9 @@
           </v-window-item>
         </v-window>
       </div>
+      
     </v-card>
+    
   </template>
   
   <script>

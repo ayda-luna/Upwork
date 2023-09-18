@@ -2,7 +2,7 @@
   <v-layout>
     <v-app-bar density="compact">
       <template v-slot:prepend>
-        <div class="nav-logo">
+        <div class="nav-logo" @click="redirectToMainPage">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 102 28"
@@ -138,7 +138,9 @@
     <v-card v-if="showTabs" class="ma-15">
       <div class="d-flex flex-row mx-15 px-15">
         <v-tabs v-model="tab" direction="vertical" color="green">
-          <v-tab value="option-1"> Option 1 </v-tab>
+          <router-link to="/dropdown"
+            ><v-tab value="option-1"> Talent Marketplace </v-tab></router-link
+          >
           <v-tab value="option-2"> Option 2 </v-tab>
           <v-tab value="option-3"> Option 3 </v-tab>
         </v-tabs>
@@ -146,19 +148,16 @@
           <v-window-item value="option-1">
             <v-card flat>
               <v-card-text>
-                <p>
-                  Sed aliquam ultrices mauris. Donec posuere vulputate arcu.
-                  Morbi ac felis. Etiam feugiat lorem non metus. Sed a libero.
-                </p>
+                <h3>Talent Marketplace</h3>
 
-                <p>
+                <p class="mxa-2 pa-2">
                   Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel,
                   lacus. Aenean tellus metus, bibendum sed, posuere ac, mattis
                   non, nunc. Aliquam lobortis. Aliquam lobortis. Suspendisse non
                   nisl sit amet velit hendrerit rutrum.
                 </p>
 
-                <p class="mb-0">
+                <p class="mb-2">
                   Phasellus dolor. Fusce neque. Fusce fermentum odio nec arcu.
                   Pellentesque libero tortor, tincidunt et, tincidunt eget,
                   semper nec, quam. Phasellus blandit leo ut odio.
@@ -247,7 +246,11 @@ export default {
       { title: "Click Me" },
     ],
   }),
-  methods: {},
+  methods: {
+    redirectToMainPage() {
+      this.$router.push("/");
+    },
+  },
 };
 </script>
 
