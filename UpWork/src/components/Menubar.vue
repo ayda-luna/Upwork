@@ -1,6 +1,6 @@
 <template>
-  <div class="menubar mx-16 px-13">
-    <v-card>
+  <div class="menubar mx-16 px-16">
+    <v-card class="mx-10">
       <v-tabs v-model="tab" bg-color="white">
         <v-tab value="one">Item One</v-tab>
         <v-tab value="two">Item Two</v-tab>

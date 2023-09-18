@@ -136,8 +136,8 @@
       </template>
     </v-app-bar>
     <v-card v-if="showTabs" class="ma-15">
-      <div class="d-flex flex-row">
-        <v-tabs v-model="tab" direction="vertical" color="primary">
+      <div class="d-flex flex-row mx-15 px-15">
+        <v-tabs v-model="tab" direction="vertical" color="green">
           <v-tab value="option-1"> Option 1 </v-tab>
           <v-tab value="option-2"> Option 2 </v-tab>
           <v-tab value="option-3"> Option 3 </v-tab>
@@ -349,5 +349,11 @@ hr {
 .v-btn {
   text-transform: lowercase !important;
   line-height: 0% !important;
+}
+.v-layout {
+  --v-scrollbar-offset: 0px;
+  display: flex;
+  flex: 1 1 auto;
+  position: absolute;
 }
 </style>
