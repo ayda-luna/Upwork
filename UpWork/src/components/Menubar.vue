@@ -2,24 +2,14 @@
   <div class="menubar mx-16 px-16">
     <v-card class="mx-10">
       <v-tabs v-model="tab" bg-color="white">
-        <v-tab value="one">Item One</v-tab>
-        <v-tab value="two">Item Two</v-tab>
-        <v-tab value="three">Item Three</v-tab>
-        <v-tab value="four">Item Three</v-tab>
-        <v-tab value="five">Item Three</v-tab>
-        <v-tab value="six">Item Three</v-tab>
+        <v-tab v-for="(item, index) in items" :key="index">
+          <template v-if="item.hide">
+            <router-link :to="item.path" class="nav-link">
+              {{ item.tab }}
+            </router-link>
+          </template>
+        </v-tab>
       </v-tabs>
-
-      <v-card-text>
-        <v-window v-model="tab">
-          <v-window-item value="one"> One </v-window-item>
-          <v-window-item value="two"> Two </v-window-item>
-          <v-window-item value="three"> Three </v-window-item>
-          <v-window-item value="four"> Three </v-window-item>
-          <v-window-item value="five"> Three </v-window-item>
-          <v-window-item value="six"> Three </v-window-item>
-        </v-window>
-      </v-card-text>
     </v-card>
   </div>
 </template>
@@ -28,10 +18,10 @@
 export default {
   data: () => ({
     items: [
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me 2" },
+      { tab: "Development & IT", path: "main", hide: true },
+      { tab: "AI Services", path: "product", hide: true },
+      { tab: "Design & Creative", path: "test", hide: true },
+      { tab: "Click Me4", path: "asdasd", hide: true },
     ],
 
     tab: null,
@@ -47,5 +37,10 @@ export default {
 }
 .v-card--variant-elevated {
   box-shadow: none !important;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
 }
 </style>
